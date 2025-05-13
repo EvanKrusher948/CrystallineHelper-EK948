@@ -39,6 +39,7 @@ entities.vitellary/bumperblock.placements.name.vertical=Bumper Block (Vertical)
 entities.vitellary/bumperblock.placements.name.horizontal=Bumper Block (Horizontal)
 entities.vitellary/cassetteflags.placements.name.cassette_flags=Cassette Flag Controller
 entities.vitellary/customheart.placements.name.custom_heart=Custom Fake Heart
+entities.vitellary/customheartt.placements.name.custom_heartt=Custom Fake Fart
 entities.vitellary/custompuffer.placements.name.puffer_right=Custom Puffer (Right)
 entities.vitellary/custompuffer.placements.name.puffer_left=Custom Puffer (Left)
 entities.vitellary/customtouchswitch.placements.name.custom_touch_switch=Custom Moving Touch Switch
@@ -153,7 +154,6 @@ entities.vitellary/forcejumpcrystal.attributes.description.holdJump=Whether the 
 # Keyberry
 entities.vitellary/keyberry.attributes.description.winged=The keyberry attempts to vertically rise offscreen when the player dashes.
 entities.vitellary/keyberry.attributes.description.collectTime=How long the player needs to be grounded in order for the berry to be collected.
-entities.vitellary/keyberry.attributes.description.persistent=Whether the keyberry and the door it unlocks should disappear permanently, or not (re-appearing when the room is re-entered).
 
 # Keyberry With Return
 entities.vitellary/returnkeyberry.attributes.description.winged=The keyberry attempts to vertically rise offscreen when the player dashes.
@@ -207,7 +207,6 @@ entities.vitellary/custompuffer.attributes.description.holdFlip=Whether the puff
 entities.vitellary/custompuffer.attributes.description.boostMode=The way the puffer's explosion should affect the player.\nSet Speed: Default puffer behavior, sets the player's speed to the launch speed in the angle specified.\nRedirect Speed: If the player has a greater speed than the launch speed specified, apply that speed to the new angle instead.\nRedirect + Add Speed: Takes the player's current speed and redirects it, then adds the puffer's launch speed as well.
 entities.vitellary/custompuffer.attributes.description.legacyBoost=Whether the puffer boost should use the older, less lenient method of checking player input (only accepting input before the freeze frames, rather than after).
 entities.vitellary/custompuffer.attributes.description.absoluteVector=If true, the redirect modes for launch will use the player's full speed, including vertical and horizontal, rather than only horizontal speed.
-entities.vitellary/custompuffer.attributes.description.tangible=Controls if the puffer can be hit by the player.
 
 # Energy Booster
 entities.vitellary/energybooster.attributes.description.behaveLikeDash=Whether the speed resets after the initial boost unless dashing down diagonal.
@@ -239,6 +238,23 @@ entities.vitellary/customheart.attributes.description.switchCoreMode=Switches co
 entities.vitellary/customheart.attributes.description.colorGrade=Whether switching core mode also switches color grade between hot and cold.
 entities.vitellary/customheart.attributes.description.static=Disables the heart floaty effect.
 entities.vitellary/customheart.attributes.description.poemCutscene=Whether the heart should show the poem cutscene upon collection.\nDoes not do anything if "Slowdown" is false.
+
+# Custom Fake Heartt
+entities.vitellary/customheartt.attributes.description.respawnTime=The time in seconds for the heart to respawn after being collected. -1 for no respawn.
+entities.vitellary/customheartt.attributes.description.dashCount=How many dashes does the player get when hitting the heart
+entities.vitellary/customheartt.attributes.description.staminaE=How much extra stamina the player gets when hitting the heart.
+entities.vitellary/customheartt.attributes.description.smallHitbox=Toggles between mini heart hitbox and normal heart hitbox.
+entities.vitellary/customheartt.attributes.description.type=Changes the sprite of the heart.\nRed, Blue, Gold - Vanilla colors\nCustom - Lets you set the sprite path and color\nCore, CoreInverted - Changes based on core mode\nRandom - Randomly picks one of the three main colors
+entities.vitellary/customheartt.attributes.description.path=The path to the heart textures in the "collectables" subfolder.
+entities.vitellary/customheartt.attributes.description.color=The hex color for the sprite if using a Custom heart.
+entities.vitellary/customheartt.attributes.description.light=Whether the heart has some light effect or something idk its usually there
+entities.vitellary/customheartt.attributes.description.dust=Whether the heart has some dust particles
+entities.vitellary/customheartt.attributes.description.static=Disables the heart floaty effect.
+entities.vitellary/customheartt.attributes.description.bully=Whether the heart is a big meanie and bounces you away even if you dash
+entities.vitellary/customheartt.attributes.description.switchCoreMode=Switches core mode when collected. Red = hot, Blue = cold, other types = toggle
+entities.vitellary/customheartt.attributes.description.slowdown=Whether collecting the heart plays the cutscene and slows down the game.
+entities.vitellary/customheartt.attributes.description.poemCutscene=Whether the heart should show the poem cutscene upon collection.\nDoes not do anything if "Slowdown" is false.
+entities.vitellary/customheartt.attributes.description.poemId=Dialogue ID for the poem. Note: Will be prefixed with "poem_"
 
 # Custom Moving Touch Switch
 entities.vitellary/customtouchswitch.attributes.description.flag=The session flag this touch switch sets. Give the same to multiple touch switches and switch gates to group them.
@@ -277,7 +293,6 @@ entities.vitellary/interactivechaser.attributes.description.sendToPlayer=If true
 
 # Flag Kevin
 entities.vitellary/flagkevin.attributes.description.customPath=Path to the kevin sprite to use. Relative to Atlases/Gameplay/objects.
-entities.vitellary/flagkevin.attributes.description.fillColor=Fill color for the kevin.
 entities.vitellary/flagkevin.attributes.description.flagDirection=Direction to move when the flag is triggered.
 entities.vitellary/flagkevin.attributes.description.flag=Flag that should trigger the kevin.
 entities.vitellary/flagkevin.attributes.description.inverted=If true, the kevin is triggered when the flag becomes false rather than true.
@@ -287,7 +302,6 @@ entities.vitellary/flagkevin.attributes.description.axes=Determines which sides 
 entities.vitellary/flagkevin.attributes.description.playerCanHit=Whether the player can hit the Kevin's sides.
 entities.vitellary/flagkevin.attributes.description.repeatWhileFlag=If true, the kevin will repeatedly move in the flag direction every time it returns to its initial spot while the flag is true.
 entities.vitellary/flagkevin.attributes.description.setFlagOnHit=If true, the flag will be set to true when the player hits the Kevin.
-entities.vitellary/flagkevin.attributes.description.useVanillaParticles=If true, the kevin will use vanilla activate/crush/impact particles instead of only impact particles.
 entities.vitellary/flagkevin.attributes.description.crushSpeed=The speed at which the Kevin will move when attacking.
 entities.vitellary/flagkevin.attributes.description.returnSpeed=The speed at which the Kevin will move when returning.
 
